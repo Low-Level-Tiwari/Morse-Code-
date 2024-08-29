@@ -1,0 +1,1 @@
+cp $1 t3;cat map|cut -d/ -f2>t|cat map|cut -d/ -f1>t2;paste -d/ t t2|sed -e 's/^/[a-z.]/' -e 's/\//[a-z.]\/./'|sed -e "s/^/sed 's\// "|sed -n "s/$/.\/\g' t3>t;cp t t3;/e";cat t3|sed 's/\.//g' > origin;rm t3 t t2
